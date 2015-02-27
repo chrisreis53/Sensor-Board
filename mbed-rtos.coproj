@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.5" name="mbed-rtos">
+  <Target name="mbed-rtos" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="561" chipName="STM32L152RD" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="4"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value="-fno-common; -fmessage-length=0; -Wall; -fno-strict-aliasing; -fno-rtti; -fno-exceptions; -ffunction-sections; -fdata-sections; -std=gnu++98"/>
+        <Option name="FPU" value="1"/>
+        <Option name="SupportCPlusplus" value="1"/>
+        <Includepaths>
+           <Includepath path="."/>  <Includepath path="rtx"/>  <Includepath path="rtx/TARGET_CORTEX_M"/>  <Includepath path="rtx/TARGET_CORTEX_M/TARGET_M3"/>  <Includepath path="rtx/TARGET_CORTEX_M/TARGET_M3/TOOLCHAIN_GCC"/>  <Includepath path="rtos"/> 
+        </Includepaths>
+        <DefinedSymbols>
+           <Define name="TARGET_NUCLEO_L152RE"/>  <Define name="TARGET_M3"/>  <Define name="TARGET_CORTEX_M"/>  <Define name="TARGET_STM"/>  <Define name="TARGET_STM32L1"/>  <Define name="TARGET_STM32L152RE"/>  <Define name="TOOLCHAIN_GCC_ARM"/>  <Define name="TOOLCHAIN_GCC"/>  <Define name="__CORTEX_M3"/>  <Define name="ARM_MATH_CM3"/>  <Define name="MBED_BUILD_TIMESTAMP=1425006333.06"/>  <Define name="__MBED__=1"/>  <Define name="TARGET_FF_ARDUINO"/>  <Define name="TARGET_FF_MORPHO"/> 
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="1"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="0"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <Option name="nostartfiles" value="0"/>
+        <Option name="UserEditLinker" value="-Wl,--wrap,main; --specs=nano.specs; -u _printf_float; -u _scanf_float;  "/>
+        <LinkedLibraries>
+          
+          <Libset dir="" libs="stdc++"/>
+          <Libset dir="" libs="supc++"/>
+          <Libset dir="" libs="m"/>
+          <Libset dir="" libs="gcc"/>
+          <Libset dir="" libs="c"/>
+          <Libset dir="" libs="nosys"/>
+        </LinkedLibraries>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00080000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00013EC4" startValue="0x2000013C"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="mbed-rtos"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="stm32l1xx_384.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./"/>
+  <Files>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/TARGET_M3/TOOLCHAIN_GCC/HAL_CM3.s" path="rtx/TARGET_CORTEX_M/TARGET_M3/TOOLCHAIN_GCC/HAL_CM3.s" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/TARGET_M3/TOOLCHAIN_GCC/SVC_Table.s" path="rtx/TARGET_CORTEX_M/TARGET_M3/TOOLCHAIN_GCC/SVC_Table.s" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/rt_Task.c" path="rtx/TARGET_CORTEX_M/rt_Task.c" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/rt_MemBox.c" path="rtx/TARGET_CORTEX_M/rt_MemBox.c" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/rt_Robin.c" path="rtx/TARGET_CORTEX_M/rt_Robin.c" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/rt_Mailbox.c" path="rtx/TARGET_CORTEX_M/rt_Mailbox.c" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/rt_System.c" path="rtx/TARGET_CORTEX_M/rt_System.c" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/rt_CMSIS.c" path="rtx/TARGET_CORTEX_M/rt_CMSIS.c" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/rt_Event.c" path="rtx/TARGET_CORTEX_M/rt_Event.c" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/rt_Semaphore.c" path="rtx/TARGET_CORTEX_M/rt_Semaphore.c" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/RTX_Conf_CM.c" path="rtx/TARGET_CORTEX_M/RTX_Conf_CM.c" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/rt_Time.c" path="rtx/TARGET_CORTEX_M/rt_Time.c" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/rt_Mutex.c" path="rtx/TARGET_CORTEX_M/rt_Mutex.c" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/rt_List.c" path="rtx/TARGET_CORTEX_M/rt_List.c" type="1"/>
+    
+    <File name="sources/rtx/TARGET_CORTEX_M/HAL_CM.c" path="rtx/TARGET_CORTEX_M/HAL_CM.c" type="1"/>
+    
+    <File name="sources/rtos/RtosTimer.cpp" path="rtos/RtosTimer.cpp" type="1"/>
+    
+    <File name="sources/rtos/Thread.cpp" path="rtos/Thread.cpp" type="1"/>
+    
+    <File name="sources/rtos/Mutex.cpp" path="rtos/Mutex.cpp" type="1"/>
+    
+    <File name="sources/rtos/Semaphore.cpp" path="rtos/Semaphore.cpp" type="1"/>
+    
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/RTX_Conf.h" path="rtx/TARGET_CORTEX_M/RTX_Conf.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/rt_MemBox.h" path="rtx/TARGET_CORTEX_M/rt_MemBox.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/cmsis_os.h" path="rtx/TARGET_CORTEX_M/cmsis_os.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/rt_Mutex.h" path="rtx/TARGET_CORTEX_M/rt_Mutex.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/rt_Task.h" path="rtx/TARGET_CORTEX_M/rt_Task.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/rt_System.h" path="rtx/TARGET_CORTEX_M/rt_System.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/rt_Semaphore.h" path="rtx/TARGET_CORTEX_M/rt_Semaphore.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/rt_Robin.h" path="rtx/TARGET_CORTEX_M/rt_Robin.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/rt_TypeDef.h" path="rtx/TARGET_CORTEX_M/rt_TypeDef.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/rt_Time.h" path="rtx/TARGET_CORTEX_M/rt_Time.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/rt_HAL_CM.h" path="rtx/TARGET_CORTEX_M/rt_HAL_CM.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/os_tcb.h" path="rtx/TARGET_CORTEX_M/os_tcb.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/rt_Event.h" path="rtx/TARGET_CORTEX_M/rt_Event.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/rt_Mailbox.h" path="rtx/TARGET_CORTEX_M/rt_Mailbox.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/RTX_CM_lib.h" path="rtx/TARGET_CORTEX_M/RTX_CM_lib.h" type="1"/>
+    
+    <File name="headers/rtx/TARGET_CORTEX_M/rt_List.h" path="rtx/TARGET_CORTEX_M/rt_List.h" type="1"/>
+    
+    <File name="headers/rtos/Semaphore.h" path="rtos/Semaphore.h" type="1"/>
+    
+    <File name="headers/rtos/RtosTimer.h" path="rtos/RtosTimer.h" type="1"/>
+    
+    <File name="headers/rtos/Queue.h" path="rtos/Queue.h" type="1"/>
+    
+    <File name="headers/rtos/Thread.h" path="rtos/Thread.h" type="1"/>
+    
+    <File name="headers/rtos/Mail.h" path="rtos/Mail.h" type="1"/>
+    
+    <File name="headers/rtos/rtos.h" path="rtos/rtos.h" type="1"/>
+    
+    <File name="headers/rtos/MemoryPool.h" path="rtos/MemoryPool.h" type="1"/>
+    
+    <File name="headers/rtos/Mutex.h" path="rtos/Mutex.h" type="1"/>
+    
+  </Files>
+</Project>
