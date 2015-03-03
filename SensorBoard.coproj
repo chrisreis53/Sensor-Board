@@ -694,10 +694,12 @@
     <File name="headers/mbed/Ticker.h" path="mbed/Ticker.h" type="1"/>
     <File name="headers/mbed/can_api.h" path="mbed/can_api.h" type="1"/>
     <File name="sources/mbed-dsp/cmsis_dsp/FilteringFunctions/arm_correlate_fast_opt_q15.c" path="mbed-dsp/cmsis_dsp/FilteringFunctions/arm_correlate_fast_opt_q15.c" type="1"/>
+    <File name="headers/threads.h" path="threads.h" type="1"/>
     <File name="headers/mbed-rtos/rtx/TARGET_CORTEX_M/rt_Time.h" path="mbed-rtos/rtx/TARGET_CORTEX_M/rt_Time.h" type="1"/>
     <File name="headers/mbed/us_ticker_api.h" path="mbed/us_ticker_api.h" type="1"/>
     <File name="sources/mbed-dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_f32.c" path="mbed-dsp/cmsis_dsp/FilteringFunctions/arm_conv_partial_f32.c" type="1"/>
     <File name="sources/mbed-dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_squared_q31.c" path="mbed-dsp/cmsis_dsp/ComplexMathFunctions/arm_cmplx_mag_squared_q31.c" type="1"/>
+    <File name="headers/helper.h" path="helper.h" type="1"/>
     <File name="sources/mbed-dsp/cmsis_dsp/MatrixFunctions/arm_mat_sub_q31.c" path="mbed-dsp/cmsis_dsp/MatrixFunctions/arm_mat_sub_q31.c" type="1"/>
     <File name="sources/WIZnet_Library/WIZnetInterface/WIZnetInterface.cpp" path="WIZnet_Library/WIZnetInterface/WIZnetInterface.cpp" type="1"/>
     <File name="headers/mbed-dsp/dsp/FIR_f32.h" path="mbed-dsp/dsp/FIR_f32.h" type="1"/>
